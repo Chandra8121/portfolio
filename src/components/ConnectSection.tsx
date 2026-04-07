@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Send, ExternalLink, Code2 } from "lucide-react";
 import { useState } from "react";
 
 const ConnectSection = () => {
@@ -49,7 +49,7 @@ const ConnectSection = () => {
 
               <a href="#" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
                 <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
-                  <Linkedin size={20} />
+                  <ExternalLink size={20} />
                 </div>
                 <div>
                   <p className="text-xs font-display tracking-wider text-muted-foreground/60 mb-0.5">LINKEDIN</p>
@@ -59,7 +59,7 @@ const ConnectSection = () => {
 
               <a href="#" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
                 <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
-                  <Github size={20} />
+                  <Code2 size={20} />
                 </div>
                 <div>
                   <p className="text-xs font-display tracking-wider text-muted-foreground/60 mb-0.5">GITHUB</p>
