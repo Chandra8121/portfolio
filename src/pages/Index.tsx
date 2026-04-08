@@ -16,7 +16,7 @@ const Index = () => {
       <ConnectSection />
       <footer className="py-8 text-center border-t border-border">
         <p className="text-xs text-muted-foreground font-display tracking-wider">
-          © 2024 · Built with AI & passion
+          © 2024 Chandra S. All rights reserved.
         </p>
       </footer>
     </div>

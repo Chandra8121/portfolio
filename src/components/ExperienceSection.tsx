@@ -36,55 +36,97 @@ const experiences = [
 const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20 px-6 bg-muted/40">
-      <div className="max-w-4xl mx-auto">
-        <motion.div className="mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+      <div className="max-w-5xl mx-auto">
+        <motion.div className="mb-12 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Experience</h2>
-          <div className="w-12 h-1 bg-primary rounded mt-3" />
+          <div className="w-12 h-1 bg-primary rounded mt-3 mx-auto" />
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-3 top-2 bottom-2 w-px bg-border" />
+          {/* Center timeline line */}
+          <div className="absolute left-1/2 -translate-x-px top-0 bottom-0 w-0.5 bg-border hidden md:block" />
+          {/* Mobile line */}
+          <div className="absolute left-3 top-0 bottom-0 w-px bg-border md:hidden" />
 
-          <div className="space-y-10">
-            {experiences.map((exp, i) => (
-              <motion.div
-                key={exp.company}
-                className="relative pl-10"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
-              >
-                {/* Dot */}
-                <div className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-primary border-2 border-background" />
+          <div className="space-y-12">
+            {experiences.map((exp, i) => {
+              const isLeft = i % 2 === 0;
 
-                <div className="bg-card rounded-xl border border-border p-6">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-                    <h3 className="font-display text-base font-semibold text-foreground">{exp.title}</h3>
-                    <span className="text-xs text-primary font-medium">{exp.period}</span>
+              return (
+                <motion.div
+                  key={exp.company}
+                  className="relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.15 }}
+                >
+                  {/* Center dot (desktop) */}
+                  <div className="absolute left-1/2 -translate-x-1/2 top-6 w-3.5 h-3.5 rounded-full bg-primary border-2 border-background z-10 hidden md:block" />
+                  {/* Mobile dot */}
+                  <div className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-primary border-2 border-background md:hidden" />
+
+                  {/* Desktop layout */}
+                  <div className={`hidden md:flex items-start gap-8 ${isLeft ? "flex-row" : "flex-row-reverse"}`}>
+                    <div className="w-[calc(50%-2rem)]">
+                      <div className="bg-card rounded-xl border border-border p-6">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                          <h3 className="font-display text-base font-semibold text-foreground">{exp.title}</h3>
+                          <span className="text-xs text-primary font-medium">{exp.period}</span>
+                        </div>
+                        <p className="text-sm text-muted-foreground mb-4">{exp.company} · {exp.location}</p>
+
+                        <ul className="space-y-1.5 mb-4">
+                          {exp.highlights.map((h, j) => (
+                            <li key={j} className="text-sm text-muted-foreground flex gap-2">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span>{h}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="flex flex-wrap gap-1.5">
+                          {exp.skills.map((s) => (
+                            <span key={s} className="text-[11px] px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                              {s}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-[calc(50%-2rem)]" />
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">{exp.company} · {exp.location}</p>
 
-                  <ul className="space-y-1.5 mb-4">
-                    {exp.highlights.map((h, j) => (
-                      <li key={j} className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-primary mt-0.5">•</span>
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Mobile layout */}
+                  <div className="md:hidden pl-10">
+                    <div className="bg-card rounded-xl border border-border p-6">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                        <h3 className="font-display text-base font-semibold text-foreground">{exp.title}</h3>
+                        <span className="text-xs text-primary font-medium">{exp.period}</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mb-4">{exp.company} · {exp.location}</p>
 
-                  <div className="flex flex-wrap gap-1.5">
-                    {exp.skills.map((s) => (
-                      <span key={s} className="text-[11px] px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium">
-                        {s}
-                      </span>
-                    ))}
+                      <ul className="space-y-1.5 mb-4">
+                        {exp.highlights.map((h, j) => (
+                          <li key={j} className="text-sm text-muted-foreground flex gap-2">
+                            <span className="text-primary mt-0.5">•</span>
+                            <span>{h}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="flex flex-wrap gap-1.5">
+                        {exp.skills.map((s) => (
+                          <span key={s} className="text-[11px] px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>
