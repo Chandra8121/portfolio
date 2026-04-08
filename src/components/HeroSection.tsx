@@ -19,9 +19,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Building Scalable
-          <br />
-          <span className="gradient-text">AI-Powered</span> Solutions
+          Hi, I'm <span className="gradient-text">Chandra S</span>
         </motion.h1>
 
         <motion.p
@@ -30,7 +28,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Crafting backend services, ML pipelines, and full-stack apps with a focus on clean code and intelligent automation.
+          Full-stack engineer turning complex data into smart, scalable products — from robust APIs to production-ready ML systems.
         </motion.p>
 
         <motion.div
