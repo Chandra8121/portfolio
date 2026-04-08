@@ -40,7 +40,7 @@ const skillCategories = [
     color: "from-orange-500/10 to-amber-500/10",
     borderColor: "border-orange-500/20",
     skills: [
-      { name: "AWS", icon: <SiAmazonwebservices className="text-[#FF9900]" /> },
+      { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
       { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
       { name: "CI/CD", icon: null },
       { name: "Jenkins", icon: <SiJenkins className="text-[#D24939]" /> },

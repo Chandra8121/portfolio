@@ -46,10 +46,10 @@ const ConnectSection = () => {
 
             <div className="flex gap-3 pt-2">
               <a href="https://github.com/chandra8121" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all">
-                <Github size={18} />
+                <FaGithub size={18} />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all">
-                <Linkedin size={18} />
+                <FaLinkedin size={18} />
               </a>
             </div>
           </motion.div>

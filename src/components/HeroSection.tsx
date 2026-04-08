@@ -73,10 +73,10 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <a href="https://github.com/chandra8121" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Github size={20} />
+            <FaGithub size={20} />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Linkedin size={20} />
+            <FaLinkedin size={20} />
           </a>
           <a href="mailto:iamchandra29@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
             <Mail size={20} />
