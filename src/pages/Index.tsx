@@ -14,15 +14,7 @@ const Index = () => {
       <ExperienceSection />
       <EducationSection />
       <ConnectSection />
-      <footer className="py-10 text-center border-t border-border">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <div className="w-6 h-6 rounded-md bg-primary flex items-center justify-center text-primary-foreground font-display font-bold text-[10px]">
-            CS
-          </div>
-          <span className="font-display text-sm font-semibold text-foreground">
-            Chandra<span className="text-primary">Sekhar</span>
-          </span>
-        </div>
+      <footer className="py-8 text-center border-t border-border">
         <p className="text-xs text-muted-foreground font-display tracking-wider">
           © 2024 Chandra S. All rights reserved.
         </p>
