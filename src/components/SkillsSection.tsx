@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import {
   SiPytorch, SiPython, SiFlask, SiReact, SiDocker,
-  SiAmazonwebservices, SiPostgresql, SiMysql, SiSnowflake,
+  SiPostgresql, SiMysql, SiSnowflake,
   SiSelenium, SiGit, SiJenkins, SiFastapi
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { Brain, Cloud, Database, Bot, Settings, ShieldCheck } from "lucide-react";
 
 const skillCategories = [

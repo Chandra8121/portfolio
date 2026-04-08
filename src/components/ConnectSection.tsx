@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useState } from "react";
 
 const ConnectSection = () => {
